@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "an application to provide communication among VMs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "VM",
+    "communication"
+  ],
+  "author": "Larissa Rabello",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  }
+}
