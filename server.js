@@ -38,6 +38,17 @@ app.get('/', function(req, res) {
   //connection.end();
 });
 
-app.listen(3000, ()=> {
+
+
+app.post("/vote", function(req,res) {
+
+  connection.query('UPDATE FOOD SET VOTES = VOTES+1 WHERE ID=?', [req.body.id], function(err, rows, fields) {
+      if (err) console.log(err);
+  });
+  res.redirect("/");
+});
+
+
+app.listen(3000, '0.0.0.0', ()=> {
   console.log('Server listening on port 3000.');
 });
